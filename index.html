@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Better mobile web</title>
+	<link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,700' rel='stylesheet' type='text/css'>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Fira Sans', sans-serif;
+		}
+		
+		html {
+			font-size: 10px;
+			font-family: 'Fira Sans', sans-serif;
+		}
+
+		body {
+			min-width: 960px;
+			background: #FBFBFB;
+			color: #434F5B;
+		}
+		
+		a {
+			text-decoration: none;
+		}
+
+		button::-moz-focus-inner,
+		input::-moz-focus-inner {
+		  border: 0;
+		  padding: 0;
+		}
+		
+		h1.main {
+			font-size: 5.6rem;
+			line-height: 6.4rem;
+			margin-bottom: 2rem;
+			text-align: center;
+			color: #2C93E1;
+		}
+
+		h1 {
+			font-size: 3.2rem;
+			line-height: 4.6rem;
+			margin-bottom: 2rem;
+			text-align: center;
+			color: #2C93E1;
+		}
+
+		h2 {
+			font-size: 3.2rem;
+			line-height: 4.6rem;
+			margin-bottom: 4rem;
+			text-align: center;
+			color: #434F5B;
+		}
+
+		.button {
+			background: #333;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			padding: 10px 20px;
+			font-size: 2rem;
+			margin-bottom: 20px;
+		}
+
+		.main-header {
+			height: 60px;
+			background: #FBFBFB;
+			padding: 10px;
+		}
+
+		.brand {
+			float: left;
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+			background: #999;
+		}
+		
+		.main-header ul {
+			list-style: none;
+			float: right;
+		}
+
+		.main-header ul li {
+			float: left;
+			margin-right: 20px;
+			line-height: 30px;
+		}
+
+		.main-header ul li a {
+			font-size: 1.4rem;
+			color: #999;
+		}
+
+		.main-header ul li button {
+			padding: 5px 15px;
+			font-size: 1.4rem;
+			color: #fff;
+			border: none;
+			border-radius: 0.3rem;
+			background: #999;
+		}
+		
+		.section {
+			padding: 35px 0;
+		}
+
+		#first {
+			height: 650px;
+			text-align: center;
+		}
+		
+		#your-nice-app {
+			position: relative;
+			width: 600px;
+			height: 220px;
+			margin: 0 auto;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		.wrapper-files {
+			display: block;
+			width: 350px;
+			height: 220px;
+			background: #F2F2F2;
+			padding: 40px;
+			line-height: 220px;
+		}
+
+		.file {
+			display: inline-block;
+			width: 63px;
+			height: 86px;
+			background-size: 100%;
+			margin-right: 20px;
+		}
+
+		.file.file-html {
+			background: url(img/file_html.svg) no-repeat 0 0 / 100%;
+		}
+
+		.file.file-css {
+			background: url(img/file_css.svg) no-repeat 0 0 / 100%;
+		}
+
+		.file.file-js {
+			background: url(img/file_js.svg) no-repeat 0 0 / 100%;
+		}
+
+		.wrapper-devices {
+			position: relative;
+			height: 100%;
+			width: 230px;
+			float: right;
+			background: #eee;
+			overflow: hidden;
+		}
+
+		.device {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			-webkit-transition: transform 500ms cubic-bezier(0.990, 0.005, 0.195, 1); /* older webkit */
+			-webkit-transition: transform 500ms cubic-bezier(0.990, 0.005, 0.195, 1.280); 
+			   -moz-transition: transform 500ms cubic-bezier(0.990, 0.005, 0.195, 1.280); 
+			     -o-transition: transform 500ms cubic-bezier(0.990, 0.005, 0.195, 1.280); 
+			        transition: transform 500ms cubic-bezier(0.990, 0.005, 0.195, 1.280); /* custom */
+		}
+		
+		.device.waiting {
+			transform: translateY(100%);
+		}
+
+		.device.remove {
+			transform: translateY(-100%);
+			transition: transform 300ms ease-in;
+		}
+
+		.device.device-smartphone {
+			background: url(img/device_smartphone.svg) no-repeat center;
+		}
+
+		.device.device-laptop {
+			background: url(img/device_laptop.svg) no-repeat center;
+		}
+
+		.device.device-computer {
+			background: url(img/device_computer.svg) no-repeat center;
+		}
+
+		.device.device-tablet {
+			background: url(img/device_tablet.svg) no-repeat center;
+		}
+
+		.device.device-tv {
+			background: url(img/device_tv.svg) no-repeat center;
+		}
+
+
+		/* second */
+		#second {
+			padding: 66px 0;
+			background: rgba(44, 247, 255, 0.25)
+		}
+		#second .content {
+			text-align: center;
+			font-size: 0;
+		}
+
+		.benefit {
+			display: inline-block;
+			width: 300px;
+			margin-right: 20px 20px 0 0;
+			vertical-align: top;
+		}
+
+		.benefit::last-child {
+			margin-right: 0;
+		}
+
+		.benefit > div {
+			display: inline-block;
+			width: 250px;
+			height: 250px;
+			border-radius: 50%;
+			margin-bottom: 20px;
+		}
+		
+		.benefit > div.offline {
+			background: url('img/offline.svg') no-repeat scroll center center #DB5D12;
+		}
+
+		.benefit > div.instalable {
+			background: url('img/instalable.svg') no-repeat scroll center #FCCF00;
+		}
+		
+		.benefit > div.hosted {
+			background: url('img/hosted.svg') no-repeat scroll center #6FBFA4;
+		}
+
+
+		.benefit > h1 {
+			font-size: 2.4rem;
+			line-height: 2.4rem;
+			color: #434F5B;
+			margin-bottom: 10px;
+		}
+
+		.benefit > p {
+			font-size: 1.6rem;
+			padding: 0 30px; 
+		}
+	</style>
+	<script>
+	window.onload = function(){
+		var devicesWrapper = document.getElementById('wrapper-devices');
+		var kind = ['smartphone', 'tv', 'tablet', 'laptop', 'computer'];
+		var rand = 0;
+
+		function createDevice(){
+			var newRand = rand;
+			while(newRand == rand){
+				newRand = Math.floor(Math.random() * 5);
+			}
+			rand = newRand;
+			var device = document.createElement('div');
+			device.classList.add('device');
+			device.classList.add('device-'+kind[rand]);
+			device.classList.add('waiting');
+			devicesWrapper.appendChild(device);
+		}
+		
+		function changeDevice(){
+			var deviceToRemove = devicesWrapper.querySelector('.device:first-child');
+			var deviceWaiting = devicesWrapper.querySelector('.device.waiting');
+			deviceToRemove.classList.add('remove');
+			deviceWaiting.classList.remove('waiting');
+			setTimeout(function(){
+				devicesWrapper.removeChild(deviceToRemove);
+				createDevice();
+				setTimeout(function(){
+					changeDevice();
+				}, 3000);
+			}, 1000);
+		}
+		
+		createDevice();
+		setTimeout(function(){
+			changeDevice();
+		}, 3000);
+		
+	}
+	</script>
+</head>
+<body>
+	<header class="main-header">
+		<div class="brand"></div>
+		<ul>
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+			<li><a href="#">Button</a></li>
+			<li><button>Button</button></li>
+		</ul>
+	</header>
+	<section id="first" class="section">
+		<div class="content">
+			<h1 class="main">BUILDING A BETTER<br>MOBILE WEB</h1>
+			<h2>THE WEB IS THE PLATAFORM</h2>
+			<div id="your-nice-app">
+				<div id="wrapper-devices" class="wrapper-devices">
+					<div class="device device-smartphone"></div>
+				</div>
+				<div class="wrapper-files">
+					<div class="file file-html"></div>
+					<div class="file file-css"></div>
+					<div class="file file-js"></div>
+				</div>
+			</div>
+			<button class="button">START NOW</button>
+		</div>
+	</section>
+	<section id="second" class="section">
+		<div class="content">
+			<h1>THE BENEFITS OF WEB AND NATIVE APPS</h1>
+			<div class="benefit">
+				<div class="offline">
+					
+				</div>
+				<h1>OFFLINE</h1>
+				<p>
+					Appcache manifests are automatically 
+					generated so that your app can work offline 
+					in case no connection is available.
+				</p>
+			</div>
+			<div class="benefit">
+				<div class="instalable">
+					
+				</div>
+				<h1>OFFLINE</h1>
+				<p>
+					AppMaker will inject into your app the 
+					appropiate mechanism to allow users to install 
+					your app in the different soported platforms.
+				</p>
+			</div>
+			<div class="benefit">
+				<div class="hosted">
+					
+				</div>
+				<h1>OFFLINE</h1>
+				<p>
+					We will book a domain for your app and
+					will host it at that domain so that you can
+					distribute it with zero effort.
+				</p>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

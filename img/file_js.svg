@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="63px" height="86px" viewBox="0 0 63 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.2.2 (9983) - http://www.bohemiancoding.com/sketch -->
+    <title>Artboard 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path id="path-1" d="M0,1.13686838e-13 L0,105.225684 L104.72149,105.225684 L104.72149,1.13686838e-13 L0,1.13686838e-13"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="JS-file" sketch:type="MSLayerGroup" transform="translate(-21.000000, -11.000000)">
+            <g id="g10" transform="translate(52.500000, 53.910982) scale(1, -1) translate(-52.500000, -53.910982) translate(0.000000, 0.910982)">
+                <g id="g12">
+                    <g id="g14-Clipped">
+                        <mask id="mask-2" sketch:name="path18" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="path18"></g>
+                        <g id="g14" mask="url(#mask-2)">
+                            <g transform="translate(20.944298, 10.372262)" id="g20">
+                                <g>
+                                    <g id="g22" transform="translate(0.000000, 0.000000)" fill="#F5C930" sketch:type="MSShapeGroup">
+                                        <g id="g24" transform="translate(0.000000, 0.000000)">
+                                            <path d="M0.807519045,80.7601956 C0.807519045,82.7314234 2.39928569,84.3308538 4.36106827,84.3308538 L35.4261165,84.3308538 C35.4261165,84.3308538 43.3381505,76.3807264 47.2941674,72.4056627 C52.2045699,67.4716185 62.025375,57.60353 62.025375,57.60353 L62.025375,3.72096457 C62.025375,1.74973675 60.4336083,0.150306346 58.4718257,0.150306346 L4.36106827,0.150306346 C2.39928569,0.150306346 0.807519045,1.74973675 0.807519045,3.72096457 L0.807519045,80.7601956 Z" id="path26"></path>
+                                        </g>
+                                    </g>
+                                    <g id="g28" transform="translate(34.907163, 57.439846)" fill="#EBB033" sketch:type="MSShapeGroup">
+                                        <g id="g30">
+                                            <path d="M0.518953162,26.8910082 L27.1182116,0.163684398 L4.07250239,0.163684398 C2.11071981,0.163684398 0.518953162,1.7631148 0.518953162,3.73434262 L0.518953162,26.8910082 L0.518953162,26.8910082 Z" id="path32"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <text id="JS" sketch:type="MSTextLayer" font-family="Helvetica" font-size="14.1666667" font-weight="normal" fill="#FFFFFF">
+                <tspan x="25.866208" y="88.992524">JS</tspan>
+            </text>
+        </g>
+        <g id="Artboard-1" sketch:type="MSArtboardGroup"></g>
+    </g>
+</svg>
